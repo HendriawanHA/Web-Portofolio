@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -35,7 +36,7 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
-        <div class="hero-text fade-up">
+        <div class="hero-text" data-aos="fade-up">
           <p class="hero-label">Web Developer</p>
           <h1>Halo, saya <span class="text-gradient">Hendriawan</span></h1>
           <p class="hero-desc">
@@ -47,7 +48,7 @@
             <a href="#tentang" class="btn btn-outline">Tentang Saya</a>
           </div>
         </div>
-        <div class="hero-avatar fade-up" style="animation-delay: 0.2s">
+        <div class="hero-avatar" data-aos="fade-up" style="animation-delay: 0.2s">
           <div class="avatar-box">
             <img src="me.jpg" alt="Hendriawan" />
           </div>
@@ -59,7 +60,7 @@
     <!-- Tentang -->
     <section id="tentang" class="section section-alt">
       <div class="container">
-        <div class="section-center fade-up">
+        <div class="section-center" data-aos="fade-up">
           <h2>Tentang Saya</h2>
           <div class="pemisah"></div>
           <p>
@@ -82,29 +83,29 @@
     <!-- Pendidikan -->
     <section id="pendidikan" class="section">
       <div class="container">
-        <div class="section-header fade-up">
+        <div class="section-header" data-aos="fade-up">
           <h2>Pendidikan</h2>
           <div class="pemisah"></div>
         </div>
         <div class="pendidikan">
           <div class="pendidikan-line"></div>
-          <div class="pendidikan-item fade-left">
+          <div class="pendidikan-item" data-aos="fade-left" data-aos-delay="100">
             <div class="pendidikan-dot"></div>
             <p class="pendidikan-period">2010 – 2016</p>
             <h3>SD Cijerah 06</h3>
           </div>
-          <div class="pendidikan-item fade-left" style="animation-delay: 0.1s">
+          <div class="pendidikan-item" data-aos="fade-left" data-aos-delay="200" style="animation-delay: 0.1s">
             <div class="pendidikan-dot"></div>
             <p class="pendidikan-period">2016 – 2018</p>
             <h3>SMP YPPKP Bandung</h3>
           </div>
-          <div class="pendidikan-item fade-left" style="animation-delay: 0.2s">
+          <div class="pendidikan-item" data-aos="fade-left" data-aos-delay="300" style="animation-delay: 0.2s">
             <div class="pendidikan-dot"></div>
             <p class="pendidikan-period">2018 – 2021</p>
             <h3>SMK Pasundan 2 Bandung</h3>
             <p class="pendidikan-major">Teknik Komputer & Jaringan</p>
           </div>
-          <div class="pendidikan-item fade-left" style="animation-delay: 0.3s">
+          <div class="pendidikan-item" data-aos="fade-left" data-aos-delay="400" style="animation-delay: 0.3s">
             <div class="pendidikan-dot"></div>
             <p class="pendidikan-period">2022 – Sekarang</p>
             <h3>Universitas Teknologi Bandung</h3>
@@ -117,11 +118,11 @@
     <!-- Pengalaman -->
     <section id="pengalaman" class="section section-alt">
       <div class="container">
-        <div class="section-header fade-up">
+        <div class="section-header" data-aos="fade-up">
           <h2>Pengalaman</h2>
           <div class="pemisah"></div>
         </div>
-        <div class="pengalaman-card fade-up">
+        <div class="pengalaman-card" data-aos="fade-up">
           <div class="exp-header">
             <div>
               <h3>Fanda Notebook</h3>
@@ -140,49 +141,49 @@
     <!-- Skills -->
     <section id="skills" class="section">
       <div class="container">
-        <div class="section-header fade-up">
+        <div class="section-header" data-aos="fade-up">
           <h2>Skills</h2>
           <div class="pemisah"></div>
         </div>
         <div class="skills-list">
-          <div class="skill-item fade-left">
+          <div class="skill-item" data-aos="fade-left">
             <div class="skill-info">
-              <span>HTML</span><span class="skill-pct">70%</span>
+              <span>HTML</span><span class="skill-pct" >70%</span>
             </div>
             <div class="skill-bar">
-              <div class="skill-fill" data-width="70"></div>
+              <div class="skill-fill" style="--target-width: 70%;"></div>
             </div>
           </div>
-          <div class="skill-item fade-left" style="animation-delay: 0.1s">
+          <div class="skill-item" data-aos="fade-left" style="animation-delay: 0.1s ">
             <div class="skill-info">
               <span>CSS</span><span class="skill-pct">50%</span>
             </div>
             <div class="skill-bar">
-              <div class="skill-fill" data-width="50"></div>
+              <div class="skill-fill" style="--target-width: 50%;"></div>
             </div>
           </div>
-          <div class="skill-item fade-left" style="animation-delay: 0.2s">
+          <div class="skill-item" data-aos="fade-left" style="animation-delay: 0.2s">
             <div class="skill-info">
               <span>JavaScript</span><span class="skill-pct">30%</span>
             </div>
             <div class="skill-bar">
-              <div class="skill-fill" data-width="30"></div>
+              <div class="skill-fill" style="--target-width: 30%;"></div>
             </div>
           </div>
-          <div class="skill-item fade-left" style="animation-delay: 0.3s">
+          <div class="skill-item" data-aos="fade-left" style="animation-delay: 0.3s">
             <div class="skill-info">
               <span>PHP</span><span class="skill-pct">30%</span>
             </div>
             <div class="skill-bar">
-              <div class="skill-fill" data-width="30"></div>
+              <div class="skill-fill" style="--target-width: 30%;"></div>
             </div>
           </div>
-          <div class="skill-item fade-left" style="animation-delay: 0.4s">
+          <div class="skill-item" data-aos="fade-left" style="animation-delay: 0.4s">
             <div class="skill-info">
               <span>Canva</span><span class="skill-pct">65%</span>
             </div>
             <div class="skill-bar">
-              <div class="skill-fill" data-width="65"></div>
+              <div class="skill-fill" style="--target-width: 65%;"></div>
             </div>
           </div>
         </div>
@@ -192,24 +193,24 @@
     <!-- Hobi -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-header fade-up">
+        <div class="section-header" data-aos="fade-up">
           <h2>Hobi</h2>
           <div class="pemisah"></div>
         </div>
         <div class="hobi-grid">
-          <div class="hobi-card fade-up">
+          <div class="hobi-card" data-aos="fade-up">
             <span class="hobi-icon">🎮</span>
             <p>Bermain Game</p>
           </div>
-          <div class="hobi-card fade-up" style="animation-delay: 0.1s">
+          <div class="hobi-card" data-aos="fade-up" style="animation-delay: 0.1s">
             <span class="hobi-icon">🚴</span>
             <p>Bersepeda</p>
           </div>
-          <div class="hobi-card fade-up" style="animation-delay: 0.2s">
+          <div class="hobi-card" data-aos="fade-up" style="animation-delay: 0.2s">
             <span class="hobi-icon">💻</span>
             <p>Membuat Projek Sederhana</p>
           </div>
-          <div class="hobi-card fade-up" style="animation-delay: 0.3s">
+          <div class="hobi-card" data-aos="fade-up" style="animation-delay: 0.3s">
             <span class="hobi-icon">🏸</span>
             <p>Badminton</p>
           </div>
@@ -220,26 +221,26 @@
     <!-- Kontak -->
     <section id="kontak" class="section">
       <div class="container">
-        <div class="section-header fade-up">
+        <div class="section-header" data-aos="fade-up">
           <h2>Kontak</h2>
           <div class="pemisah"></div>
         </div>
         <div class="kontak-list">
-          <div class="kontak-card fade-up">
+          <div class="kontak-card" data-aos="fade-up">
             <span class="kontak-icon">📱</span>
             <div>
               <p class="kontak-label">Telepon</p>
               <a href="tel:+6281285521068">+62 812-8552-1068</a>
             </div>
           </div>
-          <div class="kontak-card fade-up" style="animation-delay: 0.1s">
+          <div class="kontak-card" data-aos="fade-up" style="animation-delay: 0.1s">
             <span class="kontak-icon">📧</span>
             <div>
               <p class="kontak-label">Email</p>
               <a href="mailto:kagaminevip@gmail.com">kagaminevip@gmail.com</a>
             </div>
           </div>
-          <div class="kontak-card fade-up" style="animation-delay: 0.2s">
+          <div class="kontak-card" data-aos="fade-up" style="animation-delay: 0.2s">
             <span class="kontak-icon">📍</span>
             <div>
               <p class="kontak-label">Alamat</p>
@@ -258,5 +259,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    </script>
   </body>
 </html>
