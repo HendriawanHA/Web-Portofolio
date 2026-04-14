@@ -362,7 +362,7 @@ img {
   margin-top: 0.15rem;
 }
 
-/* ===== pengalamanERIENCE ===== */
+/* Pengalaman */
 .pengalaman-card {
   max-width: 40rem;
   margin: 0 auto;
@@ -399,7 +399,7 @@ img {
   line-height: 1.7;
 }
 
-/* ===== SKILLS ===== */
+/* Skill */
 .skills-list {
   max-width: 40rem;
   margin: 0 auto;
@@ -438,7 +438,7 @@ img {
   animation: fillProgress 1.5s ease-out forwards;
 }
 
-/* ===== hobi ===== */
+/* Hobi */
 .hobi-grid {
   max-width: 36rem;
   margin: 0 auto;
@@ -477,7 +477,7 @@ img {
   }
 }
 
-/* ===== kontak ===== */
+/* Kontak */
 .kontak-list {
   max-width: 32rem;
   margin: 0 auto;
@@ -515,7 +515,7 @@ img {
   font-weight: 500;
 }
 
-/* ===== FOOTER ===== */
+/* Footer */
 .footer {
   padding: 2rem 0;
   border-top: 1px solid var(--border);
