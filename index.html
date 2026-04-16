@@ -1,224 +1,575 @@
 <!doctype html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" class="scroll-smooth" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hendriawan | Portfolio</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+      href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
   </head>
-  <body class="bg-[#fdfcfb] text-slate-900 font-sans antialiased">
-    <nav
-      class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200"
+  <body class="text-slate-200 antialiased">
+    <div
+      class="navbar bg-[#0f172a]/80 backdrop-blur-md sticky top-0 z-50 border-b border-white/10 shadow-2xl"
     >
       <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
+        class="container mx-auto flex justify-around items-center w-full px-4"
       >
-        <a href="#" class="font-display text-xl font-bold text-gradient"
-          >Hendriawan</a
-        >
-
-        <ul class="hidden md:flex gap-8 text-sm font-medium text-slate-500">
-          <li>
-            <a href="#tentang" class="hover:text-primary transition">Tentang</a>
-          </li>
-          <li>
-            <a href="#projek" class="hover:text-primary transition">Projek</a>
-          </li>
-          <li>
-            <a href="#skills" class="hover:text-primary transition">Skills</a>
-          </li>
-          <li>
-            <a href="#kontak" class="hover:text-primary transition">Kontak</a>
-          </li>
-        </ul>
-
-        <button
-          id="hamburger"
-          class="md:hidden flex flex-col gap-1.5 focus:outline-none"
-        >
-          <span
-            class="w-6 h-0.5 bg-slate-900 transition-all duration-300"
-          ></span>
-          <span
-            class="w-6 h-0.5 bg-slate-900 transition-all duration-300"
-          ></span>
-          <span
-            class="w-6 h-0.5 bg-slate-900 transition-all duration-300"
-          ></span>
-        </button>
-      </div>
-
-      <div
-        id="navLinks"
-        class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 gap-4 text-sm font-medium"
-      >
-        <a href="#tentang" class="block">Tentang</a>
-        <a href="#projek" class="block">Projek</a>
-        <a href="#skills" class="block">Skills</a>
-        <a href="#kontak" class="block">Kontak</a>
-      </div>
-    </nav>
-
-    <section id="tentang" class="min-h-screen flex items-center pt-20">
-      <div
-        class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12"
-      >
-        <div class="flex-1 text-center md:text-left" data-aos="fade-up">
-          <p
-            class="text-accent text-xs font-bold tracking-widest uppercase mb-3"
-          >
-            Web Developer
-          </p>
-          <h1
-            class="font-display text-4xl md:text-6xl font-bold leading-tight mb-6"
-          >
-            Halo, saya <span class="text-gradient">Hendriawan</span>
-          </h1>
-          <p class="text-slate-500 text-lg max-w-lg mb-8 mx-auto md:mx-0">
-            Fokus pada pengembangan sistem web berbasis PHP/Laravel yang aman
-            dan efisien. Sedang menyelesaikan riset mengenai enkripsi AES-128.
-          </p>
-          <div class="flex gap-4 justify-center md:justify-start">
-            <a
-              href="#kontak"
-              class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition"
-              >Hubungi Saya</a
+        <div class="flex-none lg:hidden">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost btn-circle text-[#ffb703]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-2xl bg-[#1e293b] rounded-box w-52 border border-white/10"
             >
-            <a
-              href="#projek"
-              class="border border-slate-200 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition"
-              >Lihat Projek</a
-            >
+              <li><a href="#about">Tentang</a></li>
+              <li><a href="#pendidikan">Pendidikan</a></li>
+              <li><a href="#pengalaman">Pengalaman</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#hobi">Hobi</a></li>
+              <li><a href="#projects">Projek</a></li>
+              <li><a href="#contact">Kontak</a></li>
+            </ul>
           </div>
         </div>
 
-        <div class="relative" data-aos="fade-up" data-aos-delay="200">
-          <div
-            class="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-xl relative z-10 bg-slate-100"
+        <a
+          class="text-xl font-bold tracking-tighter text-custom-accent hidden md:block"
+          >HENDRIAWAN</a
+        >
+
+        <ul class="menu menu-horizontal px-1 hidden lg:flex font-medium gap-2">
+          <li>
+            <a href="#about" class="hover:text-[#ffb703] transition-colors"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a href="#pendidikan" class="hover:text-[#ffb703] transition-colors"
+              >Pendidikan</a
+            >
+          </li>
+          <li>
+            <a href="#pengalaman" class="hover:text-[#ffb703] transition-colors"
+              >Pengalaman</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="hover:text-[#ffb703] transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a href="#hobi" class="hover:text-[#ffb703] transition-colors"
+              >Hobi</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-[#ffb703] transition-colors"
+              >Projek</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-[#ffb703] transition-colors"
+              >Kontak</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="hero min-h-[85vh] relative overflow-hidden">
+      <div
+        class="hero-content flex-col lg:flex-row-reverse gap-10 lg:gap-20 z-10"
+      >
+        <div data-aos="zoom-in">
+          <div class="avatar">
+            <div
+              class="w-48 md:w-64 rounded-full ring ring-[#fb8500] ring-offset-[#0f172a] ring-offset-4 shadow-2xl"
+            >
+              <img
+                src="me.jpg"
+                onerror="
+                  this.src =
+                    'https://ui-avatars.com/api/?name=Hendriawan&background=fb8500&color=fff'
+                "
+              />
+            </div>
+          </div>
+        </div>
+        <div class="text-center lg:text-left">
+          <h1
+            class="text-5xl md:text-7xl font-extrabold hover:text-white transition-colors duration-300"
+            data-aos="fade-right"
           >
+            Halo, Saya <span class="text-custom-accent">Hendriawan</span>
+          </h1>
+          <p
+            class="py-6 text-lg text-slate-400 max-w-md mx-auto lg:mx-0 transition-colors hover:text-slate-200"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            Junior Web Developer & Mahasiswa Teknik Informatika yang berfokus
+            pada solusi sistem web modern.
+          </p>
+          <div
+            class="flex flex-wrap gap-4 justify-center lg:justify-start"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <a
+              href="#projects"
+              class="btn bg-[#fb8500] hover:bg-[#ffb703] border-none text-[#0f172a] font-bold shadow-lg px-8"
+              >Lihat Projek</a
+            >
+            <a
+              href="#contact"
+              class="btn btn-outline text-[#ffb703] border-[#ffb703] hover:bg-[#ffb703] hover:text-[#0f172a] px-8"
+              >Hubungi Saya</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-24 px-6">
+      <div class="container mx-auto max-w-5xl">
+        <div
+          class="grid md:grid-cols-2 gap-10 items-stretch glass-card rounded-3xl overflow-hidden shadow-2xl"
+        >
+          <div class="h-full min-h-[350px]" data-aos="fade-right">
             <img
-              src="me.jpg"
-              alt="Hendriawan"
+              src="placeholder-about.jpg"
               class="w-full h-full object-cover"
+              alt="Tentang Hendriawan"
+              onerror="
+                this.src =
+                  'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800'
+              "
             />
           </div>
           <div
-            class="absolute -bottom-4 -right-4 w-48 h-48 md:w-64 md:h-64 rounded-2xl border-2 border-accent/30 -z-0"
-          ></div>
+            class="p-8 text-justify md:p-12 flex flex-col justify-center"
+            data-aos="fade-left"
+          >
+            <h2
+              class="text-3xl font-bold mb-6 inline-block border-b-4 border-[#fb8500] pb-2 w-fit"
+            >
+              Tentang Saya
+            </h2>
+            <p
+              class="text-lg leading-relaxed mb-4 hover:text-white transition-colors"
+            >
+              Saya adalah mahasiswa Teknik Informatika di Universitas Teknologi
+              Bandung berusia 22 tahun. Saya memiliki ketertarikan kuat di
+              bidang web development, khususnya menggunakan HTML, CSS,
+              JavaScript, dan PHP.
+            </p>
+            <p
+              class="text-lg leading-relaxed hover:text-white transition-colors"
+            >
+              Sebagai pribadi yang disiplin dan konsisten, saya terus belajar
+              melalui proyek-proyek praktis untuk menghadapi tantangan teknologi
+              di masa depan.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="projek" class="py-24 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="font-display text-3xl font-bold mb-4">Projek Pilihan</h2>
-          <div class="w-12 h-1 bg-gradient-custom mx-auto rounded-full"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section id="pendidikan" class="py-24 px-6">
+      <div class="container mx-auto max-w-4xl">
+        <h2
+          class="text-3xl font-bold mb-10 inline-block border-b-4 border-[#fb8500] pb-2"
+        >
+          Pendidikan
+        </h2>
+        <div class="grid gap-6">
           <div
-            class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
+            class="glass-card p-6 rounded-2xl flex gap-6 items-start hover:border-[#ffb703] transition-all"
+            data-aos="fade-up"
+          >
+            <div class="bg-white/5 p-4 rounded-xl text-[#ffb703]">
+              <i class="fa-solid fa-graduation-cap text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">
+                Universitas Teknologi Bandung
+              </h3>
+              <p class="text-[#ffb703]">Teknik Informatika</p>
+              <p class="text-sm opacity-60 italic">2022 - Sekarang</p>
+            </div>
+          </div>
+          <div
+            class="glass-card p-6 rounded-2xl flex gap-6 items-start hover:border-[#ffb703] transition-all"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="h-48 bg-slate-100 flex items-center justify-center">
-              <span class="text-slate-400 italic text-sm"
-                >Preview Projek 1</span
-              >
+            <div class="bg-white/5 p-4 rounded-xl text-[#ffb703]">
+              <i class="fa-solid fa-school text-2xl"></i>
             </div>
-            <div class="p-6">
-              <h3
-                class="font-bold text-lg mb-2 group-hover:text-primary transition"
-              >
-                Judul Projek 1
+            <div>
+              <h3 class="text-xl font-bold text-white">
+                SMK Pasundan 2 Bandung
               </h3>
-              <p class="text-slate-500 text-sm mb-4">
-                Deskripsi singkat mengenai teknologi dan solusi yang kamu bangun
-                di projek ini.
-              </p>
-              <div class="flex gap-2">
-                <span
-                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
-                  >Laravel</span
-                >
-                <span
-                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
-                  >MySQL</span
-                >
-              </div>
+              <p class="text-[#ffb703]">Teknik Komputer & Jaringan</p>
+              <p class="text-sm opacity-60 italic">2019 - 2022</p>
             </div>
           </div>
-
           <div
-            class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
+            class="glass-card p-6 rounded-2xl flex gap-6 items-start hover:border-[#ffb703] transition-all"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="h-48 bg-slate-100 flex items-center justify-center">
-              <span class="text-slate-400 italic text-sm"
-                >Preview Projek 2</span
+            <div class="bg-white/5 p-4 rounded-xl text-[#ffb703]">
+              <i class="fa-solid fa-building-columns text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">SMP YPPKP Bandung</h3>
+              <p class="text-sm opacity-60 italic">2016 - 2019</p>
+            </div>
+          </div>
+          <div
+            class="glass-card p-6 rounded-2xl flex gap-6 items-start hover:border-[#ffb703] transition-all"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="bg-white/5 p-4 rounded-xl text-[#ffb703]">
+              <i class="fa-solid fa-building-columns text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">SD Cijerah 06</h3>
+              <p class="text-sm opacity-60 italic">2010 - 2016</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pengalaman" class="py-24 px-6">
+      <div class="container mx-auto max-w-4xl">
+        <h2
+          class="text-3xl font-bold mb-10 inline-block border-b-4 border-[#fb8500] pb-2"
+        >
+          Pengalaman Kerja
+        </h2>
+        <div class="space-y-6">
+          <div
+            class="glass-card p-8 rounded-2xl border-l-4 border-[#fb8500] shadow-xl hover:translate-x-2 transition-all duration-300"
+            data-aos="fade-left"
+          >
+            <div
+              class="flex flex-col md:flex-row md:justify-between md:items-center mb-2 gap-2"
+            >
+              <h3 class="text-xl font-bold text-white">
+                PT Inovindo Digital Media - Magang
+              </h3>
+              <span
+                class="text-[#ffb703] text-sm bg-white/5 px-3 py-1 rounded-full border border-white/10"
+                >(13 April 2026 - Sekarang)</span
               >
             </div>
-            <div class="p-6">
-              <h3
-                class="font-bold text-lg mb-2 group-hover:text-primary transition"
+            <p class="text-lg font-medium text-slate-300">
+              Junior Web Developer
+            </p>
+          </div>
+
+          <div
+            class="glass-card p-8 rounded-2xl border-l-4 border-slate-500 shadow-xl hover:translate-x-2 transition-all duration-300"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
+            <div
+              class="flex flex-col md:flex-row md:justify-between md:items-center mb-2 gap-2"
+            >
+              <h3 class="text-xl font-bold text-white">Fanda Notebook - PKL</h3>
+              <span
+                class="text-[#ffb703] text-sm bg-white/5 px-3 py-1 rounded-full border border-white/10"
+                >(19 Agt 2019 - 2 Okt 2019)</span
               >
-                Judul Projek 2
+            </div>
+            <p class="text-lg font-medium mb-2 text-slate-300">
+              Service Laptop
+            </p>
+            <p class="text-sm text-slate-400 italic">
+              Memperbaiki keyboard laptop dan mengelola system backup & recovery
+              menggunakan Norton Ghost.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6">
+      <div class="container mx-auto max-w-5xl text-center">
+        <h2
+          class="text-3xl font-bold mb-12 inline-block border-b-4 border-[#fb8500] pb-2"
+        >
+          Keahlian
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-6">
+          <div
+            class="p-8 glass-card rounded-2xl hover:border-[#fb8500] transition-all group"
+            data-aos="zoom-in"
+          >
+            <i
+              class="fa-brands fa-html5 text-5xl mb-4 text-orange-500 transition-transform group-hover:scale-110"
+            ></i>
+            <p class="font-bold group-hover:text-white transition-colors">
+              HTML
+            </p>
+          </div>
+          <div
+            class="p-8 glass-card rounded-2xl hover:border-[#fb8500] transition-all group"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <i
+              class="fa-brands fa-css3-alt text-5xl mb-4 text-blue-500 transition-transform group-hover:scale-110"
+            ></i>
+            <p class="font-bold group-hover:text-white transition-colors">
+              CSS
+            </p>
+          </div>
+          <div
+            class="p-8 glass-card rounded-2xl hover:border-[#fb8500] transition-all group"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <i
+              class="fa-brands fa-js text-5xl mb-4 text-yellow-400 transition-transform group-hover:scale-110"
+            ></i>
+            <p class="font-bold group-hover:text-white transition-colors">
+              JavaScript
+            </p>
+          </div>
+          <div
+            class="p-8 glass-card rounded-2xl hover:border-[#fb8500] transition-all group"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <i
+              class="fa-brands fa-php text-5xl mb-4 text-indigo-400 transition-transform group-hover:scale-110"
+            ></i>
+            <p class="font-bold group-hover:text-white transition-colors">
+              PHP
+            </p>
+          </div>
+          <div
+            class="p-8 glass-card rounded-2xl hover:border-[#fb8500] transition-all group"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <i
+              class="fa-solid fa-palette text-5xl mb-4 text-cyan-400 transition-transform group-hover:scale-110"
+            ></i>
+            <p class="font-bold group-hover:text-white transition-colors">
+              Canva
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hobi" class="py-24 px-6">
+      <div class="container mx-auto max-w-2xl text-center">
+        <h2
+          class="text-3xl font-bold mb-12 inline-block border-b-4 border-[#fb8500] pb-2"
+        >
+          Hobi
+        </h2>
+        <div class="grid grid-cols-2 gap-4">
+          <div
+            class="glass-card p-6 rounded-2xl flex flex-col items-center gap-3 hover:border-[#ffb703] transition-all"
+            data-aos="flip-up"
+          >
+            <i class="fa-solid fa-gamepad text-3xl text-[#ffb703]"></i>
+            <span class="font-medium">Bermain Game</span>
+          </div>
+          <div
+            class="glass-card p-6 rounded-2xl flex flex-col items-center gap-3 hover:border-[#ffb703] transition-all"
+            data-aos="flip-up"
+            data-aos-delay="100"
+          >
+            <i class="fa-solid fa-bicycle text-3xl text-[#ffb703]"></i>
+            <span class="font-medium">Bersepeda</span>
+          </div>
+          <div
+            class="glass-card p-6 rounded-2xl flex flex-col items-center gap-3 hover:border-[#ffb703] transition-all"
+            data-aos="flip-up"
+            data-aos-delay="200"
+          >
+            <i class="fa-solid fa-code text-3xl text-[#ffb703]"></i>
+            <span class="font-medium">Membuat Projek Sederhana</span>
+          </div>
+          <div
+            class="glass-card p-6 rounded-2xl flex flex-col items-center gap-3 hover:border-[#ffb703] transition-all"
+            data-aos="flip-up"
+            data-aos-delay="300"
+          >
+            <i
+              class="fa-solid fa-person-walking-luggage text-3xl text-[#ffb703]"
+            ></i>
+            <span class="font-medium">Badminton</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6">
+      <div class="container mx-auto max-w-6xl">
+        <h2
+          class="text-3xl font-bold mb-10 inline-block border-b-4 border-[#fb8500] pb-2"
+        >
+          Projek Pilihan
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="glass-card rounded-3xl overflow-hidden hover:border-[#fb8500] transition-all shadow-2xl group flex flex-col"
+            data-aos="fade-up"
+          >
+            <figure class="relative h-48 overflow-hidden shrink-0">
+              <img
+                src="projek1.jpg"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#1e293b] to-transparent opacity-60"
+              ></div>
+            </figure>
+
+            <div class="p-8 flex-grow flex flex-col">
+              <h3 class="text-xl font-bold text-[#ffb703] mb-3">
+                Web PPDB Online
               </h3>
-              <p class="text-slate-500 text-sm mb-4">
-                Deskripsi singkat mengenai teknologi dan solusi yang kamu bangun
-                di projek ini.
+              <p class="text-sm opacity-70 mb-6 leading-relaxed">
+                Sistem pendaftaran menggunakan AES-128 dan Binary Search untuk
+                keamanan data siswa.
               </p>
-              <div class="flex gap-2">
+
+              <div class="flex gap-2 mt-auto">
                 <span
-                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
+                  class="text-[10px] uppercase tracking-wider font-bold px-3 py-1 bg-[#ffb703]/20 text-[#ffb703] rounded-full border border-[#ffb703]/30"
                   >PHP</span
                 >
                 <span
-                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
+                  class="text-[10px] uppercase tracking-wider font-bold px-3 py-1 bg-white/10 text-white rounded-full border border-white/20"
+                  >AES</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="glass-card rounded-3xl overflow-hidden hover:border-[#fb8500] transition-all shadow-2xl group flex flex-col"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <figure class="relative h-48 overflow-hidden shrink-0">
+              <img
+                src="projek2.jpg"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=600'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#1e293b] to-transparent opacity-60"
+              ></div>
+            </figure>
+
+            <div class="p-8 flex-grow flex flex-col">
+              <h3 class="text-xl font-bold text-[#ffb703] mb-3">
+                UTB Coffee Shop
+              </h3>
+              <p class="text-sm opacity-70 mb-6 leading-relaxed">
+                Aplikasi manajemen kopi menggunakan framework Agile/Scrum.
+              </p>
+
+              <div class="flex gap-2 mt-auto">
+                <span
+                  class="text-[10px] uppercase tracking-wider font-bold px-3 py-1 bg-[#ffb703]/20 text-[#ffb703] rounded-full border border-[#ffb703]/30"
                   >Tailwind</span
                 >
+                <span
+                  class="text-[10px] uppercase tracking-wider font-bold px-3 py-1 bg-white/10 text-white rounded-full border border-white/20"
+                  >Agile</span
+                >
               </div>
             </div>
           </div>
 
           <div
-            class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
+            class="glass-card rounded-3xl overflow-hidden hover:border-[#fb8500] transition-all shadow-2xl group flex flex-col"
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="200"
           >
-            <div class="h-48 bg-slate-100 flex items-center justify-center">
-              <span class="text-slate-400 italic text-sm"
-                >Preview Projek 3</span
-              >
-            </div>
-            <div class="p-6">
-              <h3
-                class="font-bold text-lg mb-2 group-hover:text-primary transition"
-              >
-                Judul Projek 3
+            <figure class="relative h-48 overflow-hidden shrink-0">
+              <img
+                src="projek3.jpg"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#1e293b] to-transparent opacity-60"
+              ></div>
+            </figure>
+
+            <div class="p-8 flex-grow flex flex-col">
+              <h3 class="text-xl font-bold text-[#ffb703] mb-3">
+                Student Info System
               </h3>
-              <p class="text-slate-500 text-sm mb-4">
-                Deskripsi singkat mengenai teknologi dan solusi yang kamu bangun
-                di projek ini.
+              <p class="text-sm opacity-70 mb-6 leading-relaxed">
+                Implementasi algoritma Sequential Search untuk pencarian data
+                siswa yang akurat dan cepat.
               </p>
-              <div class="flex gap-2">
+
+              <div class="flex gap-2 mt-auto">
                 <span
-                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
-                  >AlpineJS</span
+                  class="text-[10px] uppercase tracking-wider font-bold px-3 py-1 bg-[#ffb703]/20 text-[#ffb703] rounded-full border border-[#ffb703]/30"
+                  >JS</span
                 >
                 <span
-                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
-                  >AES-128</span
+                  class="text-[10px] uppercase tracking-wider font-bold px-3 py-1 bg-white/10 text-white rounded-full border border-white/20"
+                  >Search</span
                 >
               </div>
             </div>
@@ -227,60 +578,83 @@
       </div>
     </section>
 
-    <section id="skills" class="py-24">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="font-display text-3xl font-bold mb-12" data-aos="fade-up">
-          Keahlian
-        </h2>
-        <div class="flex flex-wrap justify-center gap-6" data-aos="fade-up">
-          <div
-            class="px-8 py-4 bg-white border border-slate-200 rounded-xl shadow-sm"
+    <section id="contact" class="py-24 px-6">
+      <div class="container mx-auto max-w-xl">
+        <div class="glass-card p-10 rounded-3xl shadow-2xl text-center">
+          <h2
+            class="text-3xl font-bold mb-10 inline-block border-b-4 border-[#fb8500] pb-2"
           >
-            PHP / Laravel
-          </div>
-          <div
-            class="px-8 py-4 bg-white border border-slate-200 rounded-xl shadow-sm"
-          >
-            Tailwind CSS
-          </div>
-          <div
-            class="px-8 py-4 bg-white border border-slate-200 rounded-xl shadow-sm"
-          >
-            UML Modeling
-          </div>
-          <div
-            class="px-8 py-4 bg-white border border-slate-200 rounded-xl shadow-sm"
-          >
-            Agile / Scrum
+            Hubungi Saya
+          </h2>
+          <div class="flex flex-col gap-6 items-center">
+            <div class="inline-flex flex-col gap-6 w-fit text-left">
+              <a
+                href="mailto:kagaminevip@gmail.com"
+                class="flex items-center gap-4 text-lg hover:text-[#ffb703] transition-all group"
+                data-aos="fade-up"
+              >
+                <div
+                  class="bg-white/5 p-3 rounded-full group-hover:scale-110 transition-transform"
+                >
+                  <i class="fa-regular fa-envelope text-[#ffb703]"></i>
+                </div>
+                <span>kagaminevip@gmail.com</span>
+              </a>
+              <a
+                href="https://wa.me/6281285521068"
+                target="_blank"
+                class="flex items-center gap-4 text-lg hover:text-[#25D366] transition-all group"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div
+                  class="bg-white/5 p-3 rounded-full group-hover:scale-110 transition-transform"
+                >
+                  <i class="fa-brands fa-whatsapp text-[#25D366]"></i>
+                </div>
+                <span>+62 812-8552-1068</span>
+              </a>
+              <a
+                href="https://github.com/HendriawanHA"
+                target="_blank"
+                class="flex items-center gap-4 text-lg hover:text-white transition-all group"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div
+                  class="bg-white/5 p-3 rounded-full group-hover:scale-110 transition-transform"
+                >
+                  <i class="fa-brands fa-github text-white"></i>
+                </div>
+                <span>github.com/HendriawanHA</span>
+              </a>
+              <div
+                class="flex items-center gap-4 text-lg group"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div
+                  class="bg-white/5 p-3 rounded-full group-hover:scale-110 transition-transform"
+                >
+                  <i class="fa-solid fa-location-dot text-red-500"></i>
+                </div>
+                <span>Cijerah, Bandung</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="kontak" class="py-24 bg-primary text-white text-center">
-      <div class="container mx-auto px-6" data-aos="zoom-in">
-        <h2 class="font-display text-3xl font-bold mb-6">
-          Tertarik Bekerja Sama?
-        </h2>
-        <p class="mb-8 text-blue-100">
-          Mari diskusikan projek Anda atau tanyakan seputar riset sistem
-          informasi saya.
-        </p>
-        <a
-          href="mailto:emailanda@gmail.com"
-          class="inline-block bg-accent px-8 py-4 rounded-lg font-bold hover:scale-105 transition"
-          >Kirim Email</a
-        >
       </div>
     </section>
 
     <footer
-      class="py-12 border-t border-slate-200 text-center text-slate-400 text-sm bg-white"
+      class="py-10 text-center border-t border-white/10 opacity-50 text-sm"
     >
-      <p>&copy; 2026 Hendriawan. Portfolio Project.</p>
+      <p>@ 2026 - Hendriawan</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
   </body>
 </html>
