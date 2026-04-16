@@ -1,270 +1,132 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hendriawan | Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio Hendriawan - Mahasiswa Teknik Informatika, Web Developer"
-    />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="tailwind.config.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-      <div class="container nav-container">
-        <a href="#" class="nav-logo">Hendriawan</a>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#tentang">Tentang</a></li>
-          <li><a href="#pendidikan">Pendidikan</a></li>
-          <li><a href="#pengalaman">Pengalaman</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#kontak">Kontak</a></li>
+  <body class="bg-[#fdfcfb] text-slate-900 font-sans antialiased">
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="font-display text-xl font-bold text-gradient"
+          >Hendriawan</a
+        >
+
+        <ul class="hidden md:flex gap-8 text-sm font-medium text-slate-500">
+          <li>
+            <a href="#tentang" class="hover:text-slate-900 transition"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a href="#projek" class="hover:text-slate-900 transition">Projek</a>
+          </li>
+          <li>
+            <a href="#skills" class="hover:text-slate-900 transition">Skills</a>
+          </li>
+          <li>
+            <a href="#kontak" class="hover:text-slate-900 transition">Kontak</a>
+          </li>
         </ul>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
+
+        <button
+          id="hamburger"
+          class="md:hidden flex flex-col gap-1.5 focus:outline-none"
+        >
+          <span
+            class="w-6 h-0.5 bg-slate-900 transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-slate-900 transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-slate-900 transition-all duration-300"
+          ></span>
         </button>
+      </div>
+
+      <div
+        id="navLinks"
+        class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 gap-4 text-sm font-medium"
+      >
+        <a href="#tentang" class="hover:text-primary transition">Tentang</a>
+        <a href="#projek" class="hover:text-primary transition">Projek</a>
+        <a href="#skills" class="hover:text-primary transition">Skills</a>
+        <a href="#kontak" class="hover:text-primary transition">Kontak</a>
       </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text" data-aos="fade-up">
-          <p class="hero-label">Web Developer</p>
-          <h1>Halo, saya <span class="text-gradient">Hendriawan</span></h1>
-          <p class="hero-desc">
-            Mahasiswa Teknik Informatika yang passionate di bidang web
-            development. Terus belajar dan berkembang setiap hari.
+    <section class="min-h-screen flex items-center pt-20">
+      <div
+        class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12 text-center md:text-left"
+      >
+        <div class="flex-1" data-aos="fade-up">
+          <p
+            class="text-accent text-xs font-bold tracking-widest uppercase mb-3"
+          >
+            Web Developer
           </p>
-          <div class="hero-buttons">
-            <a href="#kontak" class="btn btn-primary">Hubungi Saya</a>
-            <a href="#tentang" class="btn btn-outline">Tentang Saya</a>
-          </div>
-        </div>
-        <div class="hero-avatar" data-aos="fade-up" style="animation-delay: 0.2s">
-          <div class="avatar-box">
-            <img src="me.jpg" alt="Hendriawan" />
-          </div>
-          <div class="avatar-shadow"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tentang -->
-    <section id="tentang" class="section section-alt">
-      <div class="container">
-        <div class="section-center" data-aos="fade-up">
-          <h2>Tentang Saya</h2>
-          <div class="pemisah"></div>
-          <p>
-            Saya Hendriawan, 22 tahun, mahasiswa Teknik Informatika di
-            Universitas Teknologi Bandung sejak tahun 2022. Saya memiliki
-            ketertarikan yang kuat di bidang web development, khususnya dalam
-            pengembangan menggunakan HTML, CSS, JavaScript, dan PHP.
+          <h1
+            class="font-display text-4xl md:text-6xl font-bold leading-tight mb-6"
+          >
+            Halo, saya <span class="text-gradient">Hendriawan</span>
+          </h1>
+          <p class="text-slate-500 text-lg max-w-lg mb-8 mx-auto md:mx-0">
+            Fokus pada pengembangan sistem web berbasis PHP/Laravel yang aman
+            dan efisien.
           </p>
-          <p class="text-secondary">
-            Saat ini saya terus mengembangkan kemampuan melalui pembelajaran dan
-            proyek sederhana untuk memperkuat pemahaman di bidang tersebut. Saya
-            dikenal sebagai pribadi yang disiplin, konsisten dalam belajar,
-            serta memiliki semangat tinggi untuk terus berkembang dan menghadapi
-            tantangan dalam dunia teknologi.
-          </p>
+          <div class="flex gap-4 justify-center md:justify-start">
+            <a
+              href="#kontak"
+              class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:opacity-90"
+              >Hubungi Saya</a
+            >
+            <a
+              href="#projek"
+              class="border border-slate-200 px-6 py-3 rounded-lg font-medium hover:bg-slate-50"
+              >Lihat Projek</a
+            >
+          </div>
+        </div>
+        <div class="relative" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-xl relative z-10 bg-slate-100"
+          >
+            <img
+              src="me.jpg"
+              alt="Hendriawan"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="absolute -bottom-4 -right-4 w-48 h-48 md:w-64 md:h-64 rounded-2xl border-2 border-accent/30 -z-0"
+          ></div>
         </div>
       </div>
     </section>
 
-    <!-- Pendidikan -->
-    <section id="pendidikan" class="section">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Pendidikan</h2>
-          <div class="pemisah"></div>
-        </div>
-        <div class="pendidikan">
-          <div class="pendidikan-line"></div>
-          <div class="pendidikan-item" data-aos="fade-left" data-aos-delay="100">
-            <div class="pendidikan-dot"></div>
-            <p class="pendidikan-period">2010 – 2016</p>
-            <h3>SD Cijerah 06</h3>
-          </div>
-          <div class="pendidikan-item" data-aos="fade-left" data-aos-delay="200" style="animation-delay: 0.1s">
-            <div class="pendidikan-dot"></div>
-            <p class="pendidikan-period">2016 – 2018</p>
-            <h3>SMP YPPKP Bandung</h3>
-          </div>
-          <div class="pendidikan-item" data-aos="fade-left" data-aos-delay="300" style="animation-delay: 0.2s">
-            <div class="pendidikan-dot"></div>
-            <p class="pendidikan-period">2018 – 2021</p>
-            <h3>SMK Pasundan 2 Bandung</h3>
-            <p class="pendidikan-major">Teknik Komputer & Jaringan</p>
-          </div>
-          <div class="pendidikan-item" data-aos="fade-left" data-aos-delay="400" style="animation-delay: 0.3s">
-            <div class="pendidikan-dot"></div>
-            <p class="pendidikan-period">2022 – Sekarang</p>
-            <h3>Universitas Teknologi Bandung</h3>
-            <p class="pendidikan-major">Teknik Informatika</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pengalaman -->
-    <section id="pengalaman" class="section section-alt">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Pengalaman</h2>
-          <div class="pemisah"></div>
-        </div>
-        <div class="pengalaman-card" data-aos="fade-up">
-          <div class="exp-header">
-            <div>
-              <h3>Fanda Notebook</h3>
-              <p class="pengalaman-role">Service Laptop</p>
-            </div>
-            <p class="pengalaman-tgl">19 Agustus 2019 – 2 Oktober 2019</p>
-          </div>
-          <p>
-            Memperbaiki keyboard laptop dan mengelola system backup & recovery
-            menggunakan Norton Ghost untuk memastikan keamanan data customer.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Skills</h2>
-          <div class="pemisah"></div>
-        </div>
-        <div class="skills-list">
-          <div class="skill-item" data-aos="fade-left">
-            <div class="skill-info">
-              <span>HTML</span><span class="skill-pct" >70%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-fill" style="--target-width: 70%;"></div>
-            </div>
-          </div>
-          <div class="skill-item" data-aos="fade-left" style="animation-delay: 0.1s ">
-            <div class="skill-info">
-              <span>CSS</span><span class="skill-pct">50%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-fill" style="--target-width: 50%;"></div>
-            </div>
-          </div>
-          <div class="skill-item" data-aos="fade-left" style="animation-delay: 0.2s">
-            <div class="skill-info">
-              <span>JavaScript</span><span class="skill-pct">30%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-fill" style="--target-width: 30%;"></div>
-            </div>
-          </div>
-          <div class="skill-item" data-aos="fade-left" style="animation-delay: 0.3s">
-            <div class="skill-info">
-              <span>PHP</span><span class="skill-pct">30%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-fill" style="--target-width: 30%;"></div>
-            </div>
-          </div>
-          <div class="skill-item" data-aos="fade-left" style="animation-delay: 0.4s">
-            <div class="skill-info">
-              <span>Canva</span><span class="skill-pct">65%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-fill" style="--target-width: 65%;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hobi -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Hobi</h2>
-          <div class="pemisah"></div>
-        </div>
-        <div class="hobi-grid">
-          <div class="hobi-card" data-aos="fade-up">
-            <span class="hobi-icon">🎮</span>
-            <p>Bermain Game</p>
-          </div>
-          <div class="hobi-card" data-aos="fade-up" style="animation-delay: 0.1s">
-            <span class="hobi-icon">🚴</span>
-            <p>Bersepeda</p>
-          </div>
-          <div class="hobi-card" data-aos="fade-up" style="animation-delay: 0.2s">
-            <span class="hobi-icon">💻</span>
-            <p>Membuat Projek Sederhana</p>
-          </div>
-          <div class="hobi-card" data-aos="fade-up" style="animation-delay: 0.3s">
-            <span class="hobi-icon">🏸</span>
-            <p>Badminton</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Kontak -->
-    <section id="kontak" class="section">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Kontak</h2>
-          <div class="pemisah"></div>
-        </div>
-        <div class="kontak-list">
-          <div class="kontak-card" data-aos="fade-up">
-            <span class="kontak-icon">📱</span>
-            <div>
-              <p class="kontak-label">Telepon</p>
-              <a href="tel:+6281285521068">+62 812-8552-1068</a>
-            </div>
-          </div>
-          <div class="kontak-card" data-aos="fade-up" style="animation-delay: 0.1s">
-            <span class="kontak-icon">📧</span>
-            <div>
-              <p class="kontak-label">Email</p>
-              <a href="mailto:kagaminevip@gmail.com">kagaminevip@gmail.com</a>
-            </div>
-          </div>
-          <div class="kontak-card" data-aos="fade-up" style="animation-delay: 0.2s">
-            <span class="kontak-icon">📍</span>
-            <div>
-              <p class="kontak-label">Alamat</p>
-              <p>Jl. Cijerah Gg Al-Hidayah</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Hendriawan. All rights reserved.</p>
-      </div>
+    <footer
+      class="py-12 border-t border-slate-200 text-center text-slate-400 text-sm"
+    >
+      <p>&copy; 2026 Hendriawan. Portfolio Project.</p>
     </footer>
 
-    <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 800,
-        once: true,
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
