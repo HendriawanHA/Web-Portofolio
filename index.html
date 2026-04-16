@@ -10,9 +10,7 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script src="tailwind.config.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -29,18 +27,16 @@
 
         <ul class="hidden md:flex gap-8 text-sm font-medium text-slate-500">
           <li>
-            <a href="#tentang" class="hover:text-slate-900 transition"
-              >Tentang</a
-            >
+            <a href="#tentang" class="hover:text-primary transition">Tentang</a>
           </li>
           <li>
-            <a href="#projek" class="hover:text-slate-900 transition">Projek</a>
+            <a href="#projek" class="hover:text-primary transition">Projek</a>
           </li>
           <li>
-            <a href="#skills" class="hover:text-slate-900 transition">Skills</a>
+            <a href="#skills" class="hover:text-primary transition">Skills</a>
           </li>
           <li>
-            <a href="#kontak" class="hover:text-slate-900 transition">Kontak</a>
+            <a href="#kontak" class="hover:text-primary transition">Kontak</a>
           </li>
         </ul>
 
@@ -64,18 +60,18 @@
         id="navLinks"
         class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 gap-4 text-sm font-medium"
       >
-        <a href="#tentang" class="hover:text-primary transition">Tentang</a>
-        <a href="#projek" class="hover:text-primary transition">Projek</a>
-        <a href="#skills" class="hover:text-primary transition">Skills</a>
-        <a href="#kontak" class="hover:text-primary transition">Kontak</a>
+        <a href="#tentang" class="block">Tentang</a>
+        <a href="#projek" class="block">Projek</a>
+        <a href="#skills" class="block">Skills</a>
+        <a href="#kontak" class="block">Kontak</a>
       </div>
     </nav>
 
-    <section class="min-h-screen flex items-center pt-20">
+    <section id="tentang" class="min-h-screen flex items-center pt-20">
       <div
-        class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12 text-center md:text-left"
+        class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12"
       >
-        <div class="flex-1" data-aos="fade-up">
+        <div class="flex-1 text-center md:text-left" data-aos="fade-up">
           <p
             class="text-accent text-xs font-bold tracking-widest uppercase mb-3"
           >
@@ -88,21 +84,22 @@
           </h1>
           <p class="text-slate-500 text-lg max-w-lg mb-8 mx-auto md:mx-0">
             Fokus pada pengembangan sistem web berbasis PHP/Laravel yang aman
-            dan efisien.
+            dan efisien. Sedang menyelesaikan riset mengenai enkripsi AES-128.
           </p>
           <div class="flex gap-4 justify-center md:justify-start">
             <a
               href="#kontak"
-              class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:opacity-90"
+              class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition"
               >Hubungi Saya</a
             >
             <a
               href="#projek"
-              class="border border-slate-200 px-6 py-3 rounded-lg font-medium hover:bg-slate-50"
+              class="border border-slate-200 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition"
               >Lihat Projek</a
             >
           </div>
         </div>
+
         <div class="relative" data-aos="fade-up" data-aos-delay="200">
           <div
             class="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-xl relative z-10 bg-slate-100"
@@ -120,8 +117,165 @@
       </div>
     </section>
 
+    <section id="projek" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="font-display text-3xl font-bold mb-4">Projek Pilihan</h2>
+          <div class="w-12 h-1 bg-gradient-custom mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="h-48 bg-slate-100 flex items-center justify-center">
+              <span class="text-slate-400 italic text-sm"
+                >Preview Projek 1</span
+              >
+            </div>
+            <div class="p-6">
+              <h3
+                class="font-bold text-lg mb-2 group-hover:text-primary transition"
+              >
+                Judul Projek 1
+              </h3>
+              <p class="text-slate-500 text-sm mb-4">
+                Deskripsi singkat mengenai teknologi dan solusi yang kamu bangun
+                di projek ini.
+              </p>
+              <div class="flex gap-2">
+                <span
+                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
+                  >Laravel</span
+                >
+                <span
+                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
+                  >MySQL</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="h-48 bg-slate-100 flex items-center justify-center">
+              <span class="text-slate-400 italic text-sm"
+                >Preview Projek 2</span
+              >
+            </div>
+            <div class="p-6">
+              <h3
+                class="font-bold text-lg mb-2 group-hover:text-primary transition"
+              >
+                Judul Projek 2
+              </h3>
+              <p class="text-slate-500 text-sm mb-4">
+                Deskripsi singkat mengenai teknologi dan solusi yang kamu bangun
+                di projek ini.
+              </p>
+              <div class="flex gap-2">
+                <span
+                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
+                  >PHP</span
+                >
+                <span
+                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
+                  >Tailwind</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="h-48 bg-slate-100 flex items-center justify-center">
+              <span class="text-slate-400 italic text-sm"
+                >Preview Projek 3</span
+              >
+            </div>
+            <div class="p-6">
+              <h3
+                class="font-bold text-lg mb-2 group-hover:text-primary transition"
+              >
+                Judul Projek 3
+              </h3>
+              <p class="text-slate-500 text-sm mb-4">
+                Deskripsi singkat mengenai teknologi dan solusi yang kamu bangun
+                di projek ini.
+              </p>
+              <div class="flex gap-2">
+                <span
+                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
+                  >AlpineJS</span
+                >
+                <span
+                  class="text-[10px] bg-slate-100 px-2 py-1 rounded font-bold uppercase text-slate-600"
+                  >AES-128</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-24">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="font-display text-3xl font-bold mb-12" data-aos="fade-up">
+          Keahlian
+        </h2>
+        <div class="flex flex-wrap justify-center gap-6" data-aos="fade-up">
+          <div
+            class="px-8 py-4 bg-white border border-slate-200 rounded-xl shadow-sm"
+          >
+            PHP / Laravel
+          </div>
+          <div
+            class="px-8 py-4 bg-white border border-slate-200 rounded-xl shadow-sm"
+          >
+            Tailwind CSS
+          </div>
+          <div
+            class="px-8 py-4 bg-white border border-slate-200 rounded-xl shadow-sm"
+          >
+            UML Modeling
+          </div>
+          <div
+            class="px-8 py-4 bg-white border border-slate-200 rounded-xl shadow-sm"
+          >
+            Agile / Scrum
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="py-24 bg-primary text-white text-center">
+      <div class="container mx-auto px-6" data-aos="zoom-in">
+        <h2 class="font-display text-3xl font-bold mb-6">
+          Tertarik Bekerja Sama?
+        </h2>
+        <p class="mb-8 text-blue-100">
+          Mari diskusikan projek Anda atau tanyakan seputar riset sistem
+          informasi saya.
+        </p>
+        <a
+          href="mailto:emailanda@gmail.com"
+          class="inline-block bg-accent px-8 py-4 rounded-lg font-bold hover:scale-105 transition"
+          >Kirim Email</a
+        >
+      </div>
+    </section>
+
     <footer
-      class="py-12 border-t border-slate-200 text-center text-slate-400 text-sm"
+      class="py-12 border-t border-slate-200 text-center text-slate-400 text-sm bg-white"
     >
       <p>&copy; 2026 Hendriawan. Portfolio Project.</p>
     </footer>
